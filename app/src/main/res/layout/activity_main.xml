@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+
+        android:id="@+id/linearLayout_header"
+        android:layout_width="412dp"
+        android:layout_height="70dp"
+        android:background="#949AEA"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+
+            app:srcCompat="@drawable/logo" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_dataInput"
+        android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Name or ID"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/button_search"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_header" />
+
+    <Button
+        android:id="@+id/button_search"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/app_base"
+        android:text="Search"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_header" />
+
+    <ScrollView
+        android:id="@+id/scrollView_pokeInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="15dp"
+        android:background="@color/app_base"
+        android:contentDescription="@string/app_name"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_dataInput"
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibility="visible">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_pokeInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_base"
+
+
+            android:padding="16dp">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_pokemonNameAndId"
+                android:layout_width="300dp"
+                android:layout_height="49dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+
+                    android:id="@+id/textView_pokemonName"
+                    android:layout_width="180dp"
+                    android:layout_height="25dp"
+
+                    android:layout_marginStart="16dp"
+                    android:text="Pokemon"
+                    android:textAlignment="center"
+                    android:textColor="@color/app_base_darker"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+
+                    android:id="@+id/textView_pokemonId"
+                    android:layout_width="88dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="16dp"
+
+                    android:text="#000"
+                    android:textAlignment="center"
+                    android:textColor="@color/app_base_darker"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/textView_pokemonName"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextContrastCheck" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_pokemonImage"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_pokemonNameAndId">
+
+                <ImageView
+                    android:id="@+id/img_pokemon"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_typeA"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:padding="8dp"
+                android:paddingLeft="16dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_pokemonImage">
+
+                <TextView
+
+                    android:id="@+id/textView_typeA1"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+
+
+                    android:text="Type"
+                    android:textAlignment="center"
+                    android:textColor="@color/app_base_darker"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextContrastCheck" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_typeB"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:padding="8dp"
+                android:paddingLeft="16dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_pokemonImage">
+
+                <TextView
+
+                    android:id="@+id/textView_typeB1"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+
+
+                    android:layout_marginEnd="44dp"
+                    android:text="Type"
+                    android:textAlignment="center"
+                    android:textColor="@color/app_base_darker"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+
+                    android:id="@+id/textView_typeB2"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+
+
+                    android:layout_marginStart="44dp"
+                    android:text="Type"
+                    android:textAlignment="center"
+                    android:textColor="@color/app_base_darker"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextContrastCheck" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:id="@+id/cl_heightWeight"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="72dp"
+                android:background="@color/white"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_pokemonImage">
+
+                <TextView
+
+                    android:id="@+id/textView_height"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+
+
+                    android:layout_marginStart="36dp"
+                    android:text="Height"
+                    android:textAlignment="center"
+                    android:textColor="@color/app_base_darker"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+
+                    android:id="@+id/textView_weight"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+
+
+                    android:layout_marginEnd="36dp"
+                    android:text="Weight"
+                    android:textAlignment="center"
+                    android:textColor="@color/app_base_darker"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/textView_heightValue"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_height" />
+
+                <TextView
+                    android:id="@+id/textView_weightValue"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="36dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_weight" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:background="@color/white"
+
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_heightWeight">
+
+                <TextView
+
+                    android:id="@+id/textView_statHP"
+                    android:layout_width="64dp"
+                    android:layout_height="32dp"
+
+
+                    android:layout_marginStart="24dp"
+                    android:text="HP"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/app_base_darker"
+                    android:textIsSelectable="false"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+
+                    android:id="@+id/textView_statAttack"
+                    android:layout_width="64dp"
+                    android:layout_height="32dp"
+
+
+                    android:text="Attack"
+                    android:textAlignment="center"
+                    android:textColor="@color/app_base_darker"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+
+                    android:id="@+id/textView_statDefense"
+                    android:layout_width="64dp"
+                    android:layout_height="32dp"
+
+
+                    android:layout_marginEnd="24dp"
+                    android:text="Defense"
+                    android:textAlignment="center"
+                    android:textColor="@color/app_base_darker"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+
+                    android:id="@+id/textView_statSpecialAttack"
+                    android:layout_width="64dp"
+                    android:layout_height="32dp"
+
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Special Attack"
+                    android:textAlignment="center"
+                    android:textColor="@color/app_base_darker"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView_statHP"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+
+                    android:id="@+id/textView_statSpecialDefense"
+                    android:layout_width="64dp"
+                    android:layout_height="32dp"
+
+
+                    android:layout_marginTop="16dp"
+                    android:text="Special Defense"
+                    android:textAlignment="center"
+                    android:textColor="@color/app_base_darker"
+                    android:textSize="12sp"
+
+
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView_statAttack"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+
+                    android:id="@+id/textView_statSpeed"
+                    android:layout_width="64dp"
+                    android:layout_height="32dp"
+
+
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="Speed"
+                    android:textAlignment="center"
+                    android:textColor="@color/app_base_darker"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView_statDefense"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/textView_statHPValue"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView_statHP" />
+
+                <TextView
+                    android:id="@+id/textView_statAttackValue"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="24dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView_statAttack" />
+
+
+                <TextView
+                    android:id="@+id/textView_statDefenseValue"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView_statDefense" />
+
+                <TextView
+                    android:id="@+id/textView_statSpecialAttackValue"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_statSpecialAttack" />
+
+
+                <TextView
+                    android:id="@+id/textView_statSpecialDefenseValue"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_statSpecialDefense" />
+
+                <TextView
+                    android:id="@+id/textView_statSpeedValue"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView_statSpeed" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

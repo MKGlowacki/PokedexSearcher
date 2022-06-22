@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="app_base">#FF949AEA</color>
+    <color name="app_base_darker">#FF3F48CC</color>
+    <color name="normal">#FFA8A77A</color>
+    <color name="fire">#FFEE8130</color>
+    <color name="water">#FF6390F0</color>
+    <color name="electric">#FFF7D02C</color>
+    <color name="grass">#FF7AC74C</color>
+    <color name="ice">#FF96D9D6</color>
+    <color name="fighting">#FFC22E28</color>
+    <color name="poison">#FFA33EA1</color>
+    <color name="ground">#FFE2BF65</color>
+    <color name="flying">#FFA98FF3</color>
+    <color name="psychic">#FFF95587</color>
+    <color name="bug">#FFA6B91A</color>
+    <color name="rock">#FFB6A136</color>
+    <color name="ghost">#FF735797</color>
+    <color name="dragon">#FF6F35FC</color>
+    <color name="dark">#FF705746</color>
+    <color name="steel">#FFB7B7CE</color>
+    <color name="fairy">#FFD685AD</color>
+    <color name="bck_normal">#EAE9CE</color>
+    <color name="bck_fire">#FABB8C</color>
+    <color name="bck_water">#C1D1F1</color>
+    <color name="bck_electric">#FFF1B4</color>
+    <color name="bck_grass">#CEF8B5</color>
+    <color name="bck_ice">#E1FAF9</color>
+    <color name="bck_fighting">#FF8480</color>
+    <color name="bck_poison">#FBA2FA</color>
+    <color name="bck_ground">#FFE9AF</color>
+    <color name="bck_flying">#E0D5FF</color>
+    <color name="bck_psychic">#FFA8C3</color>
+    <color name="bck_bug">#F2FBAE</color>
+    <color name="bck_rock">#FFF4BC</color>
+    <color name="bck_ghost">#B79ED8</color>
+    <color name="bck_dragon">#BCA1FF</color>
+    <color name="bck_dark">#D5BBA9</color>
+    <color name="bck_steel">#F2F2FB</color>
+    <color name="bck_fairy">#FAC9E1</color>
+
+
+
+
+</resources>
