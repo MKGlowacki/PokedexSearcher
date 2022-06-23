@@ -34,11 +34,15 @@
         android:layout_width="215dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
+        android:textColorHighlight="@color/black"
+        android:textColorHint="@color/grey"
+        android:outlineAmbientShadowColor="@color/black"
+        android:shadowColor="@color/black"
+
         android:ems="10"
         android:hint="Name or ID"
         android:inputType="textPersonName"
-        android:textColorHighlight="@color/app_base"
-        android:textColorLink="@color/app_secondary"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
@@ -260,6 +264,7 @@
                     tools:ignore="TextContrastCheck" />
 
                 <TextView
+                    android:textColor="@color/grey"
                     android:id="@+id/textView_heightValue"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
@@ -276,6 +281,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="36dp"
                     android:text="0"
+                    android:textColor="@color/grey"
                     android:textAlignment="center"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -405,6 +411,7 @@
                     tools:ignore="TextContrastCheck" />
 
                 <TextView
+                    android:textColor="@color/grey"
                     android:id="@+id/textView_statHPValue"
                     android:layout_width="64dp"
                     android:layout_height="wrap_content"
@@ -417,6 +424,7 @@
                     app:layout_constraintTop_toTopOf="@+id/textView_statHP" />
 
                 <TextView
+                    android:textColor="@color/grey"
                     android:id="@+id/textView_statAttackValue"
                     android:layout_width="64dp"
                     android:layout_height="wrap_content"
@@ -431,6 +439,7 @@
 
 
                 <TextView
+                    android:textColor="@color/grey"
                     android:id="@+id/textView_statDefenseValue"
                     android:layout_width="64dp"
                     android:layout_height="wrap_content"
@@ -443,6 +452,7 @@
                     app:layout_constraintTop_toTopOf="@+id/textView_statDefense" />
 
                 <TextView
+                    android:textColor="@color/grey"
                     android:id="@+id/textView_statSpecialAttackValue"
                     android:layout_width="64dp"
                     android:layout_height="wrap_content"
@@ -455,6 +465,7 @@
 
 
                 <TextView
+                    android:textColor="@color/grey"
                     android:id="@+id/textView_statSpecialDefenseValue"
                     android:layout_width="64dp"
                     android:layout_height="wrap_content"
@@ -466,6 +477,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView_statSpecialDefense" />
 
                 <TextView
+                    android:textColor="@color/grey"
                     android:id="@+id/textView_statSpeedValue"
                     android:layout_width="64dp"
                     android:layout_height="wrap_content"

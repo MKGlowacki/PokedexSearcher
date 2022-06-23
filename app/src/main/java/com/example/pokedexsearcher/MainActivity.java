@@ -166,7 +166,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                        Toast.makeText(MainActivity.this, backgroundColor, Toast.LENGTH_LONG).show();
 
 
 
