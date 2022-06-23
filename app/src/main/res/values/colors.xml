@@ -8,7 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="app_base">#FF949AEA</color>
-    <color name="app_base_darker">#FF3F48CC</color>
+    <color name="app_secondary">#FF3F48CC</color>
     <color name="normal">#FFA8A77A</color>
     <color name="fire">#FFEE8130</color>
     <color name="water">#FF6390F0</color>
@@ -45,6 +45,7 @@
     <color name="bck_dark">#D5BBA9</color>
     <color name="bck_steel">#F2F2FB</color>
     <color name="bck_fairy">#FAC9E1</color>
+
 
 
 
