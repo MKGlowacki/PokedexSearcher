@@ -37,6 +37,8 @@
         android:ems="10"
         android:hint="Name or ID"
         android:inputType="textPersonName"
+        android:textColorHighlight="@color/app_base"
+        android:textColorLink="@color/app_secondary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,8 +61,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="15dp"
-        android:background="@color/app_base"
-        android:contentDescription="@string/app_name"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -493,7 +493,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/whiteBackground"
                 android:layout_width="300dp"
-                android:layout_height="250dp"
+                android:layout_height="300dp"
                 android:layout_marginTop="16dp"
                 android:background="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -504,9 +504,9 @@
 
             <ImageView
                 android:id="@+id/imageView_pokemon"
-                android:layout_marginTop="16dp"
                 android:layout_width="250dp"
                 android:layout_height="250dp"
+                android:layout_marginTop="41dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cl_pokemonNameAndId"
