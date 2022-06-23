@@ -28,9 +28,7 @@ import java.net.URL;
 public class MainActivity extends AppCompatActivity {
 
 
-
-
-
+    //funkcja do zmieniania pierwszej litery stringa na wielka
 
     private String capitalize(final String line) {
         return Character.toUpperCase(line.charAt(0)) + line.substring(1);
@@ -84,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         cl_typeB = findViewById(R.id.cl_typeB);
         img_pokemon = findViewById(R.id.imageView_pokemon);
 
+        //oddzielny obiekt do laczenia sie z api
         PokemonDataService pokemonDataService = new PokemonDataService(MainActivity.this);
 
         button_search.setOnClickListener(new View.OnClickListener() {
@@ -95,12 +94,13 @@ public class MainActivity extends AppCompatActivity {
                 pokemonDataService.getPokemon(et_dataInput.getText().toString(), new PokemonDataService.PokemonInfoVolleyResponseListener() {
                     @Override
                     public void onError(String message) {
-                        Toast.makeText(MainActivity.this, "nie dziala", Toast.LENGTH_SHORT).show();
+                        System.out.println(message);
                     }
 
                     @Override
                     public void onResponse(PokedexEntryModel pokemon) {
 
+                        //wrzucanie wartosci z api do odpowiednich kontrolek
 
                         textView_pokemonName.setText( capitalize(pokemon.getName()));
 
@@ -121,6 +121,8 @@ public class MainActivity extends AppCompatActivity {
                         String backgroundColor, textColor;
                         PokedexColors pokedexColors;
 
+                        //w zaleznosci czy dany pokemon ma 1 czy 2 typy, delikatnie różne okienka są wyświetlane
+                        //kolory aplikacji sa rozne w zaleznosci od typu pokemona
                         if(pokemon.isManyTypes()){
 
                             cl_typeA.setVisibility(View.INVISIBLE);
@@ -146,6 +148,8 @@ public class MainActivity extends AppCompatActivity {
 
                         }
 
+                        //zmiana kolorkow zeby pasowaly do typu pokemona
+
                         backgroundColor = pokedexColors.getMainColorHexValue();
                         textColor = pokedexColors.getSecondaryColorHexValue();
 
@@ -164,12 +168,7 @@ public class MainActivity extends AppCompatActivity {
                         textView_statSpecialDefense.setTextColor(Color.parseColor(textColor));
                         textView_statSpeed.setTextColor(Color.parseColor(textColor));
 
-
-
-
-
-
-
+                        //zmiana wartosci tekstu na ta z api
                         textView_heightValue.setText(Double.toString(pokemon.getHeight()) + "m" );
                         textView_weightValue.setText(Double.toString(pokemon.getWeight()) + "kg");
 
@@ -180,6 +179,7 @@ public class MainActivity extends AppCompatActivity {
                         textView_statSpecialDefenseValue.setText(Integer.toString(pokemon.getSp_defense()));
                         textView_statSpeedValue.setText(Integer.toString(pokemon.getSpeed()));
 
+                        //zmiana obrazku na ten z api
                         Glide.with(MainActivity.this).load(pokemon.getImg_url()).into(img_pokemon);
 
 

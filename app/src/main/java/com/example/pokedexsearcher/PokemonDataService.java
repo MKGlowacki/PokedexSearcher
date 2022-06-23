@@ -20,10 +20,13 @@ public class PokemonDataService {
     public static final String QUERY_FOR_POKEMONSEARCH = "https://pokeapi.co/api/v2/pokemon/";
 
     Context context;
-
+    //konstruktor
     public PokemonDataService(Context context) {
         this.context = context;
     }
+
+
+    //korzystam z biblioteki Volley w celu osiągniecia asynchronicznosci
 
     public interface PokemonInfoVolleyResponseListener {
         void onError(String message);
@@ -36,13 +39,12 @@ public class PokemonDataService {
 
         String url = QUERY_FOR_POKEMONSEARCH + pokemonNameOrId;
 
+        //wyciaganie dancyh z api
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 
                 try {
-
-
 
                     JSONArray stats = response.getJSONArray("stats");
                     JSONArray types = response.getJSONArray("types");
@@ -77,8 +79,6 @@ public class PokemonDataService {
 
 
                     pokemonInfoVolleyResponseListener.onResponse(pokedexEntry);
-
-
 
 
                 } catch (JSONException e) {

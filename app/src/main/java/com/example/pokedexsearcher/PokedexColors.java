@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class PokedexColors {
 
+    //klasa sluzaca do wyciagania odpowiednich kolorow, tak zeby pasowaly do typow pokemona
+
     String mainTypeColor, secondaryTypeColor;
     String mainColorHexValue, secondaryColorHexValue, mainTypeHexValue;
 
@@ -21,6 +23,8 @@ public class PokedexColors {
     public void setMainTypeHexValue(String mainTypeHexValue) {
         this.mainTypeHexValue = mainTypeHexValue;
     }
+
+    //2 konstruktory w zaleznosci czy dany pokemon ma 1 czy 2 typy
 
     public PokedexColors(String mainTypeColor, String secondaryTypeColor) {
         this.mainTypeColor = mainTypeColor;

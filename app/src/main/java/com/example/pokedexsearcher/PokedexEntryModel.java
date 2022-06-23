@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PokedexEntryModel {
+
+    //klasa w ktorej przechowywane sa wybrane wartosci z api na temat danego pokemona
+
     String name;
     String img_url;
     int id;
