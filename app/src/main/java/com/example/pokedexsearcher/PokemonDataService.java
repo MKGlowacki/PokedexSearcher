@@ -90,7 +90,7 @@ public class PokemonDataService {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(context, error.toString(), Toast.LENGTH_SHORT).show();
+                
                 error.printStackTrace();
             }
         });
